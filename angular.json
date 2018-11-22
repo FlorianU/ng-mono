@@ -1,0 +1,278 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "rappenstein-mobile": {
+      "root": "apps/rappenstein-mobile/",
+      "sourceRoot": "apps/rappenstein-mobile/src",
+      "projectType": "application",
+      "prefix": "personal-mono",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/rappenstein-mobile",
+            "index": "apps/rappenstein-mobile/src/index.html",
+            "main": "apps/rappenstein-mobile/src/main.ts",
+            "polyfills": "apps/rappenstein-mobile/src/polyfills.ts",
+            "tsConfig": "apps/rappenstein-mobile/tsconfig.app.json",
+            "assets": [
+              "apps/rappenstein-mobile/src/favicon.ico",
+              "apps/rappenstein-mobile/src/assets"
+            ],
+            "styles": [
+              "apps/rappenstein-mobile/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/rappenstein-mobile/src/environments/environment.ts",
+                  "with": "apps/rappenstein-mobile/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "rappenstein-mobile:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rappenstein-mobile:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rappenstein-mobile:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/rappenstein-mobile/src/test.ts",
+            "polyfills": "apps/rappenstein-mobile/src/polyfills.ts",
+            "tsConfig": "apps/rappenstein-mobile/tsconfig.spec.json",
+            "karmaConfig": "apps/rappenstein-mobile/karma.conf.js",
+            "styles": [
+              "apps/rappenstein-mobile/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/rappenstein-mobile/src/favicon.ico",
+              "apps/rappenstein-mobile/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/rappenstein-mobile/tsconfig.app.json",
+              "apps/rappenstein-mobile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "rappenstein-mobile-e2e": {
+      "root": "apps/rappenstein-mobile-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/rappenstein-mobile-e2e/protractor.conf.js",
+            "devServerTarget": "rappenstein-mobile:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "rappenstein-mobile:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/rappenstein-mobile-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-portfolio": {
+      "root": "apps/e-portfolio/",
+      "sourceRoot": "apps/e-portfolio/src",
+      "projectType": "application",
+      "prefix": "personal-mono",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/e-portfolio",
+            "index": "apps/e-portfolio/src/index.html",
+            "main": "apps/e-portfolio/src/main.ts",
+            "polyfills": "apps/e-portfolio/src/polyfills.ts",
+            "tsConfig": "apps/e-portfolio/tsconfig.app.json",
+            "assets": [
+              "apps/e-portfolio/src/favicon.ico",
+              "apps/e-portfolio/src/assets"
+            ],
+            "styles": [
+              "apps/e-portfolio/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/e-portfolio/src/environments/environment.ts",
+                  "with": "apps/e-portfolio/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "e-portfolio:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "e-portfolio:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "e-portfolio:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/e-portfolio/src/test.ts",
+            "polyfills": "apps/e-portfolio/src/polyfills.ts",
+            "tsConfig": "apps/e-portfolio/tsconfig.spec.json",
+            "karmaConfig": "apps/e-portfolio/karma.conf.js",
+            "styles": [
+              "apps/e-portfolio/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/e-portfolio/src/favicon.ico",
+              "apps/e-portfolio/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/e-portfolio/tsconfig.app.json",
+              "apps/e-portfolio/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "e-portfolio-e2e": {
+      "root": "apps/e-portfolio-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/e-portfolio-e2e/protractor.conf.js",
+            "devServerTarget": "e-portfolio:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "e-portfolio:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/e-portfolio-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics",
+    "packageManager": "npm"
+  },
+  "defaultProject": "apps-rappenstein-mobile"
+}

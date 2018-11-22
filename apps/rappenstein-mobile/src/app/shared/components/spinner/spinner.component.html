@@ -1,0 +1,10 @@
+<div *ngIf="isSpinning" class="d-flex flex-column justify-content-center align-items-center" style="position: absolute; z-index: 10002; background-color: rgba(244,244,244,0.3); height: calc(100% - 20px); width: calc(100% - 20px);">
+      <p class="k-icon k-i-loading k-icon-64"></p>
+      <small>
+            <p>{{ spinnerMessage }}</p>
+      </small>
+</div>
+<div *ngIf="isSpinningListMode" style="width: calc(100% - 20px);">
+      <div class="k-icon k-i-loading mx-2"></div>
+      <small class="text-muted mx-1">{{ spinnerMessage }}</small>
+</div>

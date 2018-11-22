@@ -1,0 +1,36 @@
+{
+  "npmScope": "personal-mono",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "apps-rappenstein-mobile": {
+      "tags": []
+    },
+    "apps-rappenstein-mobile-e2e": {
+      "tags": []
+    },
+    "personal-mono-rappenstein-mobile": {
+      "tags": []
+    },
+    "personal-mono-rappenstein-mobile-e2e": {
+      "tags": []
+    },
+    "rappenstein-mobile": {
+      "tags": []
+    },
+    "rappenstein-mobile-e2e": {
+      "tags": []
+    },
+    "e-portfolio": {
+      "tags": []
+    },
+    "e-portfolio-e2e": {
+      "tags": []
+    }
+  }
+}
