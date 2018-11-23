@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '@rappenstein-mobile/interfaces';
+import { PostsService } from '@rappenstein-mobile/services';
 
-import { Post } from '../../interfaces/post';
-import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'personal-mono-dashboard',

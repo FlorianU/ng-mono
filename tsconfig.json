@@ -16,6 +16,14 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@e-portfolio/components": ["apps/e-portfolio/src/app/components/"],
+      "@e-portfolio/services": ["apps/e-portfolio/src/app/services/"],
+      "@e-portfolio/interfaces": ["apps/e-portfolio/src/app/interfaces/"],
+      "@e-portfolio/pipes": ["apps/e-portfolio/src/app/pipes/"],
+      "@rappenstein-mobile/components": ["apps/rappenstein-mobile/src/app/components/"],
+      "@rappenstein-mobile/services": ["apps/rappenstein-mobile/src/app/services/"],
+      "@rappenstein-mobile/interfaces": ["apps/rappenstein-mobile/src/app/interfaces/"],
+      "@rappenstein-mobile/pipes": ["apps/rappenstein-mobile/src/app/pipes/"],
     }
   },
   "exclude": [
