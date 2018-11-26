@@ -7,7 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angkor';
+  public scrollBtnOpacity: number = 0;
 
-  constructor(){
+  constructor() {
+    window.addEventListener('scroll', (event: any) => {
+      if(window.pageYOffset > 50){
+        this.scrollBtnOpacity = 1;
+      }
+      else {
+        this.scrollBtnOpacity = 0;
+      }
+  });
   }
+
+  scrollToElement($element): void {
+    $element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
+
 }

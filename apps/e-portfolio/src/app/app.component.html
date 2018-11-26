@@ -1,22 +1,17 @@
-<div id="header" class="align-center container">
-  <div class="row">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-  </div>
-  <div class="row">
-    <div class="col-4">
-      <a href="video">Video</a>
-    </div>
-    <div class="col-4">
-      <a href="pictures">Bilder</a>
-    </div>
-    <div class="col-4">
-      <a href="">Impressum</a>
+<div class="h-100 w-100" style="text-align:center; margin: 0 0 0 0;">
+  <div id="header">
+    <img class="pl-5 pt-4 float-left" src="assets/images/Logo.png"/>
+    <h1 id="headerTitle">Welcome to Angkor</h1>
+    <div class="topNav row justify-content-md-center">
+      <button type="button" class="btn col-2" [ngx-scroll-to]="'#pictures'">Bilder</button>
+      <button type="button" class="btn col-2" [ngx-scroll-to]="'#video'">Video</button>
+      <button type="button" class="btn col-2" [ngx-scroll-to]="'#footer'">Impressum</button>
     </div>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<personal-mono-pictures id="pictures"></personal-mono-pictures>
+<personal-mono-video id="video"></personal-mono-video>
+<personal-mono-footer id="footer"></personal-mono-footer>
 
-<personal-mono-footer></personal-mono-footer>
+<button id="back-to-top" [style.opacity]="scrollBtnOpacity" class="btn btn-primary btn-circle back-to-top" role="button" title="Klicken Sie um wieder nach oben zu gelangen" data-toggle="tooltip" data-placement="left" [ngx-scroll-to]="'#header'">TOP</button>

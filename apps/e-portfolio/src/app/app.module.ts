@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NxModule } from '@nrwl/nx';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,10 +16,10 @@ import { VideoComponent } from './components/video/video.component';
     PicturesComponent,
     FooterComponent],
   imports: [
+    ScrollToModule.forRoot(),
     BrowserModule,
-    AppRoutingModule,
     NxModule.forRoot(),
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
